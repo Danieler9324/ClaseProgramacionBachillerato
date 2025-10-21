@@ -1,0 +1,56 @@
+/* Diseño de la topbar */
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 100;
+    background-color: rgb(97, 97, 250); 
+}
+
+.nav ul {
+    display: flex;         
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav a:hover{
+    color: yellow;
+    text-decoration: none;
+}
+
+.nav a{
+    color: black;
+    text-decoration: none;
+}
+
+h2{
+    color: yellow;
+}
+
+/* Diseño del contenido */
+body{
+    margin: 0;
+    padding-top: 130px;
+}
+
+.img{
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+p {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: rgb(150, 150, 250);
+    color: white;
+    font-size: 25px;
+}

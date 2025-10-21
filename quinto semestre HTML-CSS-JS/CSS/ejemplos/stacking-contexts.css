@@ -1,0 +1,33 @@
+.stack {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base {
+  background: rgb(99, 98, 98);
+  color: white;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+
+.middle {
+  background: rgb(143, 61, 61);
+  color: white;
+  top: 80px;
+  left: 80px;
+  z-index: 2;
+}
+
+.top {
+  background: rgb(0, 0, 0);
+  color: white;
+  top: 110px;
+  left: 110px;
+  z-index: 3;
+}

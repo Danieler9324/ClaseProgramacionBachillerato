@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Se usa link para establecer el icono de la pagina -->
+    <link rel="icon" href="logo.png">
+    <title>Biblioteca del buen saber</title>
+</head>
+<body>
+    <!-- Crea la lista de navegacion entre paginas (Menu principal, Registro de usuarios y contacto) -->
+    <nav>
+        <ul>
+            <li><a href="index.html"> Menu principal</a></li>
+            <li><a href="registro.html"> Registro de usuarios</a></li>
+            <li><a href="contacto.html"> Contacto </a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h2>Catalogo de libros</h2>
+    <hr>
+    <!-- Crea una tabla con bordes de 1 -->
+    <table border="1">
+        <!-- Se crea caption para el titulo de la tabla y el thead para definir los encabezados de la tabla, usando atributos scope -->
+        <caption>Catalogo de libros</caption>
+        <thead>
+        <tr>
+            <th scope="col">Título</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Disponibilidad</th>
+        </tr>
+        </thead>
+        <!-- Se crea el tbody para los datos de la tabla, usando atributos scope -->
+        <tbody>
+        <tr>
+            <th scope="row">El Quijote</th>
+            <td>Miguel de Cervantes</td>
+            <td>Novela</td>
+            <td>No disponible</td>
+        </tr>
+        <tr>
+            <th scope="row">Cien años de soledad</th>
+            <td>Gabriel García Márquez</td>
+            <td>Realismo magico</td>
+            <td>Disponible</td>
+        </tr>
+        <tr>
+            <th scope="row">1984</th>
+            <td>George Orwell</td>
+            <td>Distopia</td>
+            <td>Disponible</td>
+        </tr>
+        <tr>
+            <th scope="row">El nombre del viento</th>
+            <td>Patrick Rothfuss</td>
+            <td>Fantasia epica</td>
+            <td>Disponible</td>
+        </tr>
+        <tr>
+            <th scope="row">Orgullo y prejuicio</th>
+            <td>Jane Austen</td>
+            <td>Novela romatica</td>
+            <td>No disponible</td>
+        </tr>
+        <!-- Se crea el tfoot para agregar una nota usando colspan -->
+        <tfoot>
+            <td colspan="5">Total del libros 5</td>
+        </tfoot>
+        </tbody>
+    </table>
+</body>
+</html>

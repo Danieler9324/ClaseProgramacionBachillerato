@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(126, 126, 126);  /* En el body se aplica un color de fondo gris usando rgb */
+}
+
+/* Crea el diseño para la tarjeta de presentacion */
+.card {
+    width: 40%;     /* Se le aplica un 40% de tamaño */
+    background-color: rgb(23, 23, 23);
+    margin: 0 auto;     /* Establece que el contenedor va a estar en el centro de la pagina */
+    border-radius: 25px;    /* Establece el radio de los bordes usando px */
+    text-align: center;     /* Alinea el texto al centro */
+    padding-top: 10px; ;    /* Le agrega 10px al padding de arriba */
+}
+
+.img{
+    border-radius: 100px;
+    width: 35vh;    /* Establece un ancho de 35vh */
+}
+
+h1 {
+    color: white;   /* Establece que el color de los h1 es blanco usando keyword */
+    font-size: 40px;    /* Establece el tamaño de la fuente usando px */
+}
+
+.card p{
+    color: rgb(157, 156, 156);
+    font-size: 20px;
+}
+
+.button{
+    color: white ;
+    padding: 20px;  /* Le agrega 20px al padding */
+    background-color:  rgb(106, 106, 106);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+/* HOVERS */
+
+/* Hover de boton de "contacto" */
+.button:hover{
+    background-color: black;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);  /* Se aplica una sombra al contenedor usando rgba */
+    transform: scale(1.05); /* Establece que el boton se agrande un poco cuando el cursor esta encima de el */
+    transition: all 0.5s ease; /* Establece el tiempo de la transicion de un tamaño a otro */
+}
+
+/* Hover de la tarjeta de presentacion */
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 50em rgba(255, 255, 255, 0.5);  /* Se aplica sombra al contenedor poniendole un grosor de 50em y usando rgba */
+    transition: all 0.5 ease ;
+}
+
+/* Hover de la foto de perfil */
+.img:hover{
+    transition: all 0.5 ease;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgb(255, 255, 255)
+}
+
+/* Hover al parrafo que esta adentro de la tarjeta de presentacion */
+.card p:hover{
+    transform: scale(1.5);
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}

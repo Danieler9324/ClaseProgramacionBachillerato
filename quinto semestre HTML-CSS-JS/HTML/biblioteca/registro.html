@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Se usa link para establecer el icono de la pagina -->
+    <link rel="icon" href="logo.png">
+    <title>Biblioteca del buen saber</title>
+</head>
+<body>
+    <!-- Crea la lista de navegacion entre paginas (Catalogo de libros, Menu principal y contacto) -->
+    <nav>
+        <ul>
+            <li><a href="catalogo.html"> Catalago de libros </a></li>
+            <li><a href="index.html"> Menu principal</a></li>
+            <li><a href="contacto.html"> Contacto </a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h2>Registro de usuarios</h2>
+    <hr>
+    <!-- Crea un formulario usando etiquetas input y label y placeholder con los campos: username, email, password, checkbox para aceptar las reglas de la biblioteca y un boton de enviar -->
+    <form action="registro.html">
+        <label for="username">username:</label>
+        <input type="text" id="username" placeholder="Ingresa tu nombre de usuario"/>
+        <br><br>
+        <label for="email">Correo electronico:</label>
+        <input type="text" id="email" placeholder="Ingresa tu correo electronico"/>
+        <br><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" placeholder="Ingresa tu contraseña"/>
+        <p>Aceptar las reglas de la biblioteca</p>
+        <input type="checkbox">
+        <br><br>
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
