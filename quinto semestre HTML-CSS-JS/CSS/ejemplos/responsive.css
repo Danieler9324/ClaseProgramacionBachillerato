@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-inline-start: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 1rem;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

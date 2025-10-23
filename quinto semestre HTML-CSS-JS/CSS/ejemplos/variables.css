@@ -1,0 +1,37 @@
+:root {
+    --color-boton: black ;
+    --color-boton-hover: white;
+    --color-texto-hover: black ;
+    --tamaño-texto: 18px ;
+}
+
+body {
+    background-color: lightgray;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    background-color: gray;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.boton {
+    background: var(--color-boton);
+    display: block;
+    margin: 20px auto ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: var(--tamaño-texto);
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--color-boton-hover);
+    color: var(--color-texto-hover);
+}
