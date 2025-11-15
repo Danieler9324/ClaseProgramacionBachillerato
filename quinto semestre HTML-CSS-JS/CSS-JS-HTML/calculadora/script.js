@@ -32,7 +32,7 @@ botones.forEach(boton => {
         } else if (valor === "=") {
             let expresion = operacionReal;
 
-            
+            expresion = expresion.replace(/[\+\-\*\/]+$/, "");
             
             const parentesisAbiertos = (expresion.match(/Math\.sqrt\(/g) || []).length;
             const parentesisCerrados = (expresion.match(/\)/g) || []).length;
