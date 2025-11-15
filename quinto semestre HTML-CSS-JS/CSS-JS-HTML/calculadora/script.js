@@ -2,32 +2,82 @@ const display = document.querySelector('input[name="display"]');
 const botones = document.querySelectorAll("button");
 
 document.getElementById("backspace").addEventListener("click", () => {
-    display.value=display.value.slice(0,-1)
+    if (display.disabled) return;
+    display.value = display.value.slice(0, -1);
+    operacionReal = operacionReal.slice(0, -1);
 })
+
+let operacionReal = "";
+let ans = 0;
 
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
         const valor = boton.textContent;
 
-        if (valor === "⌫") return
+        if (display.value === "Infinity" || display.disabled) {
+            if (valor === "C") {
+                display.value = "";
+                operacionReal = "";
+                display.disabled = false;
+            }
+            return;
+        }
+        
+        if (valor === "⌫") return;
+        
         if (valor === "C") {
             display.value = "";
+            operacionReal = "";
+            display.disabled = false;
         } else if (valor === "=") {
+            let expresion = operacionReal;
 
-            let expresion = display.value
-            const parentesisAbiertos = (expresion.match(/√\(/g) || []).length
-            const parentesisCerrados = (expresion.match(/\)/g) || []).length
-            const faltan = parentesisAbiertos - parentesisCerrados
+            
+            
+            const parentesisAbiertos = (expresion.match(/Math\.sqrt\(/g) || []).length;
+            const parentesisCerrados = (expresion.match(/\)/g) || []).length;
+            const faltan = parentesisAbiertos - parentesisCerrados;
 
-            expresion += ")".repeat(faltan) 
+            expresion += ")".repeat(faltan);
+            
+            try {
+                const resultado = eval(expresion);
+                display.value = resultado;
+                ans = resultado;
+                operacionReal = String(resultado);
+                
+                if (resultado === Infinity || resultado === -Infinity) {
+                    display.disabled = true;
+                }
+            } catch (error) {
+                display.value = "Error";
+                display.disabled = true;
+            }
 
-            expresion = expresion.replace(/√\(/g, "Math.sqrt(").replace(/\^/g, "**").replace(/x/g, "*").replace(/÷/g, "/").replace(/%/g, "/100")
-                display.value = eval(expresion)
-        } else if (valor === "√") 
-            {
-                display.value += "√(";
+        } else if (valor === "√") {
+            display.value += "√(";
+            operacionReal += "Math.sqrt(";
+        } else if (valor === "x10ˣ") {
+            display.value += "x10^";
+            operacionReal += "*10**";
+        } else if (valor === "Ans") {
+            display.value += ans;
+            operacionReal += ans;
+        } else if (valor === "^") {
+            display.value += "^";
+            operacionReal += "**";
+        } else if (valor === "x") {
+            display.value += "x";
+            operacionReal += "*";
+        } else if (valor === "÷") {
+            display.value += "÷";
+            operacionReal += "/";
+        } else if (valor === "%") {
+            display.value += "%";
+            operacionReal += "/100 *";
         } else {
-            display.value += valor; 
+            display.value += valor;
+            operacionReal += valor;
         }
     });
 });
