@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Arial' sans-serif;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+textarea {
+    width: 800px;
+    height: 400px;
+    resize: none;
+    margin-left: 350px;
+    background-color: gray;
+}
+
+input {
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    color: white;
+    margin-left: 640px;
+}
