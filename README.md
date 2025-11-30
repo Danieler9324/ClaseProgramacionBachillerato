@@ -1,4 +1,4 @@
-# Bachillertao
+# Bachillerato
 
 Bienvenido, este repositorio es donde he estado guardando todo mi camino a la programacion durante el bachillerato, abarcando lenguajes como, Python, MySQL, JS y CSS
 
