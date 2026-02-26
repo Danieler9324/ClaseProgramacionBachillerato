@@ -42,6 +42,13 @@
             Winner = new Label();
             gano = new Label();
             volver = new Button();
+            contaX = new Label();
+            contaO = new Label();
+            contador2 = new Label();
+            numericUpDown1 = new NumericUpDown();
+            numericUpDown2 = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // b00
@@ -148,7 +155,7 @@
             Nombre.AutoSize = true;
             Nombre.BackColor = Color.WhiteSmoke;
             Nombre.Font = new Font("Segoe UI", 40F);
-            Nombre.Location = new Point(444, 9);
+            Nombre.Location = new Point(432, 9);
             Nombre.Name = "Nombre";
             Nombre.Size = new Size(180, 89);
             Nombre.TabIndex = 10;
@@ -182,7 +189,7 @@
             // volver
             // 
             volver.Enabled = false;
-            volver.Location = new Point(834, 154);
+            volver.Location = new Point(710, 473);
             volver.Name = "volver";
             volver.Size = new Size(151, 57);
             volver.TabIndex = 13;
@@ -191,12 +198,74 @@
             volver.Visible = false;
             volver.Click += button1_Click;
             // 
+            // contaX
+            // 
+            contaX.AutoSize = true;
+            contaX.BackColor = SystemColors.ButtonShadow;
+            contaX.Font = new Font("Segoe UI", 20F);
+            contaX.Location = new Point(176, 111);
+            contaX.Name = "contaX";
+            contaX.Size = new Size(40, 46);
+            contaX.TabIndex = 14;
+            contaX.Text = "X";
+            contaX.Click += label2_Click_2;
+            // 
+            // contaO
+            // 
+            contaO.AutoSize = true;
+            contaO.BackColor = SystemColors.ButtonShadow;
+            contaO.Font = new Font("Segoe UI", 20F);
+            contaO.Location = new Point(791, 111);
+            contaO.Name = "contaO";
+            contaO.Size = new Size(46, 46);
+            contaO.TabIndex = 15;
+            contaO.Text = "O";
+            contaO.Click += label2_Click_3;
+            // 
+            // contador2
+            // 
+            contador2.AutoSize = true;
+            contador2.Location = new Point(837, 109);
+            contador2.Name = "contador2";
+            contador2.Size = new Size(50, 20);
+            contador2.TabIndex = 16;
+            contador2.Text = "label2";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Font = new Font("Segoe UI", 20F);
+            numericUpDown1.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            numericUpDown1.InterceptArrowKeys = false;
+            numericUpDown1.Location = new Point(222, 111);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.ReadOnly = true;
+            numericUpDown1.Size = new Size(75, 52);
+            numericUpDown1.TabIndex = 17;
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Font = new Font("Segoe UI", 20F);
+            numericUpDown2.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            numericUpDown2.InterceptArrowKeys = false;
+            numericUpDown2.Location = new Point(843, 109);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.ReadOnly = true;
+            numericUpDown2.Size = new Size(75, 52);
+            numericUpDown2.TabIndex = 18;
+            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1088, 554);
+            Controls.Add(numericUpDown2);
+            Controls.Add(numericUpDown1);
+            Controls.Add(contador2);
+            Controls.Add(contaO);
+            Controls.Add(contaX);
             Controls.Add(volver);
             Controls.Add(gano);
             Controls.Add(Winner);
@@ -214,6 +283,8 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -234,5 +305,10 @@
         private Label Winner;
         private Label gano;
         private Button volver;
+        private Label contaX;
+        private Label contaO;
+        private Label contador2;
+        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDown2;
     }
 }

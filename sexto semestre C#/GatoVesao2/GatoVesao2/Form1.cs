@@ -28,6 +28,14 @@ namespace GatoVesao2
             gano.Visible = true;
             volver.Visible = true;
             volver.Enabled = true;
+            if (ganador == "X")
+            {
+                numericUpDown2.Value += 1;
+            }
+            if (ganador == "O")
+            {
+                numericUpDown1.Value += 1;
+            }
         }
 
         private void jugar_de_nuevo()
@@ -58,7 +66,6 @@ namespace GatoVesao2
 
         private void ver_ganador()
         {
-            // FILAS
             if (b00.Text != "" && b00.Text == b01.Text && b01.Text == b02.Text)
                 termina(b00.Text);
 
@@ -68,7 +75,6 @@ namespace GatoVesao2
             if (b20.Text != "" && b20.Text == b21.Text && b21.Text == b22.Text)
                 termina(b20.Text);
 
-            // COLUMNAS
             if (b00.Text != "" && b00.Text == b10.Text && b10.Text == b20.Text)
                 termina(b00.Text);
 
@@ -78,7 +84,6 @@ namespace GatoVesao2
             if (b02.Text != "" && b02.Text == b12.Text && b12.Text == b22.Text)
                 termina(b02.Text);
 
-            // DIAGONALES
             if (b00.Text != "" && b00.Text == b11.Text && b11.Text == b22.Text)
                 termina(b00.Text);
 
@@ -177,6 +182,26 @@ namespace GatoVesao2
         private void button1_Click(object sender, EventArgs e)
         {
             jugar_de_nuevo();
+        }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
