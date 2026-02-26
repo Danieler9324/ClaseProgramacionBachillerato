@@ -37,6 +37,11 @@
             b20 = new Button();
             b21 = new Button();
             b22 = new Button();
+            label1 = new Label();
+            Nombre = new Label();
+            Winner = new Label();
+            gano = new Label();
+            volver = new Button();
             SuspendLayout();
             // 
             // b00
@@ -129,12 +134,74 @@
             b22.UseVisualStyleBackColor = true;
             b22.Click += b22_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 20);
+            label1.TabIndex = 9;
+            label1.Text = "label1";
+            // 
+            // Nombre
+            // 
+            Nombre.AutoSize = true;
+            Nombre.BackColor = Color.WhiteSmoke;
+            Nombre.Font = new Font("Segoe UI", 40F);
+            Nombre.Location = new Point(444, 9);
+            Nombre.Name = "Nombre";
+            Nombre.Size = new Size(180, 89);
+            Nombre.TabIndex = 10;
+            Nombre.Text = "Gato";
+            Nombre.Click += label2_Click;
+            // 
+            // Winner
+            // 
+            Winner.AllowDrop = true;
+            Winner.AutoSize = true;
+            Winner.BackColor = SystemColors.ControlLightLight;
+            Winner.Font = new Font("Segoe UI", 20F);
+            Winner.Location = new Point(559, 473);
+            Winner.Name = "Winner";
+            Winner.Size = new Size(0, 46);
+            Winner.TabIndex = 11;
+            // 
+            // gano
+            // 
+            gano.AutoSize = true;
+            gano.BackColor = SystemColors.ButtonHighlight;
+            gano.Font = new Font("Segoe UI", 20F);
+            gano.Location = new Point(422, 473);
+            gano.Name = "gano";
+            gano.Size = new Size(99, 46);
+            gano.TabIndex = 12;
+            gano.Text = "Gano";
+            gano.Visible = false;
+            gano.Click += label2_Click_1;
+            // 
+            // volver
+            // 
+            volver.Enabled = false;
+            volver.Location = new Point(834, 154);
+            volver.Name = "volver";
+            volver.Size = new Size(151, 57);
+            volver.TabIndex = 13;
+            volver.Text = "Volver a jugar";
+            volver.UseVisualStyleBackColor = true;
+            volver.Visible = false;
+            volver.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1088, 554);
+            Controls.Add(volver);
+            Controls.Add(gano);
+            Controls.Add(Winner);
+            Controls.Add(Nombre);
+            Controls.Add(label1);
             Controls.Add(b22);
             Controls.Add(b21);
             Controls.Add(b20);
@@ -148,6 +215,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -161,5 +229,10 @@
         private Button b20;
         private Button b21;
         private Button b22;
+        private Label label1;
+        private Label Nombre;
+        private Label Winner;
+        private Label gano;
+        private Button volver;
     }
 }
