@@ -89,6 +89,14 @@ namespace GatoVesao2
 
             if (b02.Text != "" && b02.Text == b11.Text && b11.Text == b20.Text)
                 termina(b02.Text);
+
+            if (b00.Text != "" && b01.Text != "" && b02.Text != "" &&
+                b10.Text != "" && b11.Text != "" && b12.Text != "" &&
+                b20.Text != "" && b21.Text != "" && b22.Text != "")
+                {
+                    termina("Empate");
+                    gano.Visible = false;
+                }
         }
 
         private void cambiar()
