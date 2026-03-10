@@ -30,11 +30,11 @@ namespace GatoVesao2
             volver.Enabled = true;
             if (ganador == "X")
             {
-                numericUpDown2.Value += 1;
+                numericUpDown1.Value += 1;
             }
             if (ganador == "O")
             {
-                numericUpDown1.Value += 1;
+                numericUpDown2.Value += 1;
             }
         }
 
@@ -93,10 +93,10 @@ namespace GatoVesao2
             if (b00.Text != "" && b01.Text != "" && b02.Text != "" &&
                 b10.Text != "" && b11.Text != "" && b12.Text != "" &&
                 b20.Text != "" && b21.Text != "" && b22.Text != "")
-                {
-                    termina("Empate");
-                    gano.Visible = false;
-                }
+            {
+                termina("Empate");
+                gano.Visible = false;
+            }
         }
 
         private void cambiar()
@@ -208,6 +208,16 @@ namespace GatoVesao2
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+       
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
