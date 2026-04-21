@@ -3,11 +3,11 @@
   justify-content: space-around;
   align-items: center;
   height: 150px;
-  background: lightgray;
+  background: rgb(0, 213, 255);
 }
 
 .item {
-  background: rgb(0, 0, 0);
+  background: rgb(255, 0, 0);
   color: white;
   padding: 20px;
   border-radius: 10px;

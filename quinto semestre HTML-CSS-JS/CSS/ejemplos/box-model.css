@@ -1,8 +1,8 @@
 .box{
     width: 150px;
     padding: 20px;
-    border: 5px solid black;
+    border: 5px solid rgb(255, 0, 0);
     margin: 15px;
-    background-color: black;
+    background-color: rgb(255, 0, 0);
     color: white;
 }
