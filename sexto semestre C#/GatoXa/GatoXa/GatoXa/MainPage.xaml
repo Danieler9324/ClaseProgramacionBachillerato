@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GatoXa.MainPage">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="100">
+        <Label HorizontalOptions="Center" Text="Gato" FontSize="40"/>
+        <Label HorizontalOptions="Center" Text="Turno: X" FontSize="30"/>
+
+        <Grid HorizontalOptions="Center" VerticalOptions="Center" RowSpacing="20" ColumnSpacing="20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Clicked="ficha"></Button>
+            <Button Grid.Row="0" Grid.Column="1" Clicked="ficha"></Button>
+            <Button Grid.Row="0" Grid.Column="2" Clicked="ficha"></Button>
+            <Button Grid.Row="1" Grid.Column="0" Clicked="ficha"></Button>
+            <Button Grid.Row="1" Grid.Column="1" Clicked="ficha"></Button>
+            <Button Grid.Row="1" Grid.Column="2" Clicked="ficha"></Button>
+            <Button Grid.Row="2" Grid.Column="0" Clicked="ficha"></Button>
+            <Button Grid.Row="2" Grid.Column="1" Clicked="ficha"></Button>
+            <Button Grid.Row="2" Grid.Column="2" Clicked="ficha"></Button>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
