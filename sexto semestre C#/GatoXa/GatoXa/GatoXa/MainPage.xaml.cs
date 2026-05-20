@@ -20,7 +20,7 @@ namespace GatoXa
         {
             if (turno == "X")
                 turno = "O";
-                
+
             else
             {
                 turno = "X";
@@ -30,7 +30,7 @@ namespace GatoXa
         {
             Button btn = (Button)sender;
 
-            if (btn.Text == "")
+            if (btn.Text == null)
             {
                 btn.Text = turno;
                 cambiar(sender, e);
