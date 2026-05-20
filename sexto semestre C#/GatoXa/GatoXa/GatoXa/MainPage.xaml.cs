@@ -11,6 +11,7 @@ namespace GatoXa
     public partial class MainPage : ContentPage
     {
         string turno = "X";
+        bool juegoTerminado = false;
         public MainPage()
         {
             InitializeComponent();
@@ -25,16 +26,45 @@ namespace GatoXa
             {
                 turno = "X";
             }
+
+            lblTurno.Text = "Turno: " + turno;
         }
         private void ficha(object sender, EventArgs e)
         {
+            if (juegoTerminado)
+            {
+                return;
+            }
             Button btn = (Button)sender;
 
             if (btn.Text == null)
             {
                 btn.Text = turno;
+                verifica_ganador();
                 cambiar(sender, e);
             }
+        }
+
+        private void verifica_ganador()
+        {
+            string t = turno;
+            if (btn00.Text == t && btn01.Text == t && btn02.Text == t) MostrarGanador(t);
+            else if (btn10.Text == t && btn11.Text == t && btn12.Text == t) MostrarGanador(t);
+            else if (btn20.Text == t && btn21.Text == t && btn22.Text == t) MostrarGanador(t);
+
+            else if (btn02.Text == t && btn11.Text == t && btn20.Text == t) MostrarGanador(t);
+            else if (btn00.Text == t && btn11.Text == t && btn22.Text == t) MostrarGanador(t);
+
+            else if (btn00.Text == t && btn10.Text == t && btn20.Text == t) MostrarGanador(t);
+            else if (btn01.Text == t && btn11.Text == t && btn21.Text == t) MostrarGanador(t);
+            else if (btn02.Text == t && btn12.Text == t && btn22.Text == t) MostrarGanador(t);
+        }
+
+        private void MostrarGanador(string ganador)
+        {
+            juegoTerminado = true;
+            DisplayAlert("El juego ha terminado", "El ganador es: " + ganador, "Ok");
+
         }
     }
 }

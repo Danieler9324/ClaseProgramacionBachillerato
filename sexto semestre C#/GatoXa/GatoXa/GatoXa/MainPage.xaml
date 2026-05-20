@@ -5,7 +5,7 @@
 
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="100">
         <Label HorizontalOptions="Center" Text="Gato" FontSize="40"/>
-        <Label HorizontalOptions="Center" Text="Turno: X" FontSize="30"/>
+        <Label x:Name="lblTurno"  HorizontalOptions="Center" Text="Turno" FontSize="30"/>
 
         <Grid HorizontalOptions="Center" VerticalOptions="Center" RowSpacing="20" ColumnSpacing="20">
 
