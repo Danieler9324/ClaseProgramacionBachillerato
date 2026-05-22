@@ -60,10 +60,17 @@ namespace GatoXa
             else if (btn02.Text == t && btn12.Text == t && btn22.Text == t) MostrarGanador(t);
         }
 
-        private void MostrarGanador(string ganador)
+        private async Task MostrarGanador(string ganador)
         {
             juegoTerminado = true;
-            DisplayAlert("El juego ha terminado", "El ganador es: " + ganador, "Ok");
+            await DisplayAlert("El juego ha terminado", "El ganador es: " + ganador, "Ok");
+            if (ganador == "O")
+            {
+                contadorO.Text += 1;
+            } else
+            {
+                contadorX.Text += 1;
+            }
 
         }
     }

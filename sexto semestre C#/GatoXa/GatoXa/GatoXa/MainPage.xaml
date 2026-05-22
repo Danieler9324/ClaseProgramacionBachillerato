@@ -6,8 +6,10 @@
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="100">
         <Label HorizontalOptions="Center" Text="Gato" FontSize="40"/>
         <Label x:Name="lblTurno"  HorizontalOptions="Center" Text="Turno" FontSize="30"/>
+        <Label x:Name="contadorX" HorizontalOptions="Center"/>
+        <Label x:Name="contadorO" HorizontalOptions="Center"/>
 
-        <Grid HorizontalOptions="Center" VerticalOptions="Center" RowSpacing="20" ColumnSpacing="20">
+            <Grid HorizontalOptions="Center" VerticalOptions="Center" RowSpacing="20" ColumnSpacing="20">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
