@@ -12,6 +12,7 @@ namespace GatoXa
     {
         string turno = "X";
         bool juegoTerminado = false;
+
         public MainPage()
         {
             InitializeComponent();
@@ -20,8 +21,9 @@ namespace GatoXa
         private void cambiar(object sender, EventArgs e)
         {
             if (turno == "X")
+            {
                 turno = "O";
-
+            }
             else
             {
                 turno = "X";
@@ -29,6 +31,7 @@ namespace GatoXa
 
             lblTurno.Text = "Turno: " + turno;
         }
+
         private void ficha(object sender, EventArgs e)
         {
             if (juegoTerminado)
@@ -41,7 +44,10 @@ namespace GatoXa
             {
                 btn.Text = turno;
                 verifica_ganador();
-                cambiar(sender, e);
+                if (!juegoTerminado)
+                {
+                    cambiar(sender, e);
+                }
             }
         }
 
@@ -60,18 +66,23 @@ namespace GatoXa
             else if (btn02.Text == t && btn12.Text == t && btn22.Text == t) MostrarGanador(t);
         }
 
-        private async Task MostrarGanador(string ganador)
+        private async void MostrarGanador(string ganador)
         {
             juegoTerminado = true;
-            await DisplayAlert("El juego ha terminado", "El ganador es: " + ganador, "Ok");
-            if (ganador == "O")
-            {
-                contadorO.Text += 1;
-            } else
-            {
-                contadorX.Text += 1;
-            }
+            await DisplayAlert("El juego ha terminado", "El ganador es: " + ganador, "Volver a jugar");
 
+            ReiniciarTablero();
+        }
+
+        private void ReiniciarTablero()
+        {
+            btn00.Text = null; btn01.Text = null; btn02.Text = null;
+            btn10.Text = null; btn11.Text = null; btn12.Text = null;
+            btn20.Text = null; btn21.Text = null; btn22.Text = null;
+
+            juegoTerminado = false;
+            turno = "X";
+            lblTurno.Text = "Turno: " + turno;
         }
     }
 }
